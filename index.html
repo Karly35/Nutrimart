@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head><title>Nutrimart </title>
+	<! This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp>
+	<link href="styles/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+
+
+<!-- Tab links, each one with an onclick event associated with it -->
+<div class="tab">
+  <button class="tablinks" onclick="openInfo(event, 'Home')">Home</button>
+  <button class="tablinks" onclick="openInfo(event, 'Products')">Products</button>
+  <div class="topnav-right">
+  <a href="#"><img src="nutrimartgrey.png" height="40px" width="auto"></a>
+  <button class="tablinks" onclick="openInfo(event, 'Cart')" >Cart</button>
+  
+</div>
+</div>
+
+
+
+<!-- Tab content -->
+
+<div id="Home" ></div>
+
+
+<div id="Products" class="tabcontent">
+  
+  <h1><center>Welcome to Nutrimart!</center></h1>
+  <hr color="green"><br>
+ <center>
+	Choose a Category:
+	<select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct')">
+	<option value=""></option>
+	<option value="Vegetarian">Vegetarian</option>
+    <option value="GlutenFree">GlutenFree</option>
+    <option value="VegetarianGlutenFree">Vegetarian/GlutenFree</option>
+    <option value="None">None</option>
+	</select></center><br>
+
+	<center>
+	Select your food preference:
+	<select id="foodSelect" name="foodSelect" onchange="populateListProductChoices(this.id, 'displayProduct')">
+	<option value=""></option>
+	<option value="Organic">Organic</option>
+    <option value="Non-Organic">Non-Organic</option>
+    <option value="None">None</option>
+	</select></center><br>
+
+  
+	 
+	 <div id="displayProduct"></div><br>
+	 <center><button id="addCart" type="button" class="selectedButton" onclick="selectedItems()">
+		Add selected items to cart.
+	</button></center>
+</div>
+
+<div id="Cart" class="tabcontent">
+  <center><h3>Cart</h3>
+  <p>Here is your cart.</p>
+
+  
+
+  <div id="displayCart"></div> </center>
+
+
+</div>
+
+<hr class="hr">
+
+<footer>
+  <p><i><center>Website designed by Karly Charles.</center></i></p>
+</footer>
+		
+
+<script src="scripts/groceries.js"></script>
+<script src="scripts/main.js"></script>
+
+</body>
+</html>

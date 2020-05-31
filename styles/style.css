@@ -1,0 +1,116 @@
+/* This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp> */
+
+/* Style the tab */
+.tab {
+  overflow: scroll;
+  border: 1px solid #ccc;
+  background-color: #75787B;
+  
+#f1f1f1
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+
+}
+.tablinks{
+  color: white;
+  font-size: 20px;
+  float: left;
+  
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+} 
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 0px solid #ccc;
+  border-top: none;
+  background-color: white;
+  font-size: 17px;
+  max-width: 700px;
+  margin-right:300px;
+  margin-left:300px;
+  
+
+}
+.selectedButton{
+  background-color: green;
+  padding: 8px 14px;
+  font-size: 14px;
+  border-radius: 15px;
+  cursor: pointer;
+  color: white;
+  box-shadow: 2px 3px grey;
+}
+
+
+body{
+  margin: 0;
+  padding: 0;
+  background: url(groceries2.jpg) no-repeat center center fixed;
+  background-size: cover;
+  
+}
+.logo img{
+
+  position: absolute;
+  margin-top: 15px;
+  margin-left: 10px;
+  height: 40px;
+  width: auto;
+}
+.topnav-right{
+  float:right;
+}
+.item1 { 
+  grid-area: header; 
+}
+.item2 { 
+  grid-area: body; 
+}
+.item3 { 
+  grid-area: footer; 
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'body body body body body body'
+    'footer footer footer footer footer footer';
+  grid-gap: 10px;
+  background-color: none;
+  padding: 10px;
+}
+.hr{ 
+  height: 2px;
+  color: #57638c;
+  background-color: green;
+  border: none;
+  max-width: 700px;
+  margin-right:300px;
+  margin-left:300px;
+}
+footer{
+  text-align: center;
+  text-shadow: 2px 3px lightgrey;
+}
+
