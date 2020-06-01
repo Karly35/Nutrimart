@@ -92,22 +92,32 @@ var products = [
 
 function restrictListProducts(prods, restriction) {
 	let product_names = [];
+	let product_price = [];
+	let result = [];
 	for (let i=0; i<prods.length; i+=1) {
 		
 		if ((restriction == "VegetarianGlutenFree") && (prods[i].vegetarianGlutenFree == true)){
-			product_names.push([prods[i].name,prods[i].price]); 
+			product_names.push(prods[i].name);
+			product_price.push(prods[i].price);
+			result = product_names.map((e, i) => e+ " $" + product_price[i]);
 		}
 		else if ((restriction == "Vegetarian") && (prods[i].vegetarian == true)){
-			product_names.push([prods[i].name,prods[i].price]); 
+			product_names.push(prods[i].name);
+			product_price.push(prods[i].price); 
+			result = product_names.map((e, i) => e+ " $" + product_price[i]);
 		}
 		else if ((restriction == "GlutenFree") && (prods[i].glutenFree == true)){
-			product_names.push([prods[i].name ,prods[i].price]);
+			product_names.push(prods[i].name);
+			product_price.push(prods[i].price);
+			result = product_names.map((e, i) => e+ " $" + product_price[i]);
 		}
 		else if (restriction == "None"){
-			product_names.push([prods[i].name, prods[i].price]);
+			product_names.push(prods[i].name);
+			product_price.push(prods[i].price);
+			result = product_names.map((e, i) => e+ " $" + product_price[i]);
 		}
 	}
-	return product_names;
+	return result;
 }
 
 // Calculate the total price of items, with received parameter being a list of products
