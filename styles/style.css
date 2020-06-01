@@ -48,6 +48,7 @@
   max-width: 700px;
   margin-right:300px;
   margin-left:300px;
+
   
 
 }
@@ -65,52 +66,30 @@
 body{
   margin: 0;
   padding: 0;
+  height: 100%;
   background: url(groceries2.jpg) no-repeat center center fixed;
   background-size: cover;
   
 }
-.logo img{
-
-  position: absolute;
-  margin-top: 15px;
-  margin-left: 10px;
-  height: 40px;
-  width: auto;
-}
 .topnav-right{
   float:right;
-}
-.item1 { 
-  grid-area: header; 
-}
-.item2 { 
-  grid-area: body; 
-}
-.item3 { 
-  grid-area: footer; 
-}
-
-.grid-container {
-  display: grid;
-  grid-template-areas:
-    'header header header header header header'
-    'body body body body body body'
-    'footer footer footer footer footer footer';
-  grid-gap: 10px;
-  background-color: none;
-  padding: 10px;
 }
 .hr{ 
   height: 2px;
   color: #57638c;
   background-color: green;
   border: none;
-  max-width: 700px;
-  margin-right:300px;
-  margin-left:300px;
+  margin-right:605px;
+  margin-left:605px;
 }
+
 footer{
+  height: 100px;
+  margin-top: 600px;
+  clear:both;
+  bottom:0;
   text-align: center;
   text-shadow: 2px 3px lightgrey;
+  position: relative;
 }
 
